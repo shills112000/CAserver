@@ -1,0 +1,12 @@
+--- # Install CAserver
+- hosts: localhost
+  remote_user: ansible
+  become: yes
+  become_method: sudo
+  connection: ssh
+  gather_facts: yes
+  tasks:
+    - name: Installing Git
+      yum:
+        name: git
+        state: latest
